@@ -8,7 +8,6 @@ add_library(SOLIDLib SHARED
     LSP.cpp
     DIP.cpp
     ISP.cpp
-    srp.h   # Включаем srp.h в сборку библиотеки
 )
 
 add_executable(SOLIDProject
