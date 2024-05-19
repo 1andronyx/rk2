@@ -8,7 +8,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Добавляем тестовые исходные файлы
 set(TEST_SOURCE_FILES
     srp_test.cpp
-    srp.h
     SRP.cpp
 )
 
