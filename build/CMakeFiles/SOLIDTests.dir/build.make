@@ -69,28 +69,28 @@ include CMakeFiles/SOLIDTests.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SOLIDTests.dir/flags.make
 
-CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o: CMakeFiles/SOLIDTests.dir/flags.make
-CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o: /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/srp_test.cpp
-CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o: CMakeFiles/SOLIDTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o -MF CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o.d -o CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o -c /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/srp_test.cpp
+CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o: CMakeFiles/SOLIDTests.dir/flags.make
+CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o: /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/dip_test.cpp
+CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o: CMakeFiles/SOLIDTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o -MF CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o.d -o CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o -c /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/dip_test.cpp
 
-CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/srp_test.cpp > CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.i
+CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/dip_test.cpp > CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.i
 
-CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/srp_test.cpp -o CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.s
+CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/dip_test.cpp -o CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.s
 
 # Object files for target SOLIDTests
 SOLIDTests_OBJECTS = \
-"CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o"
+"CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o"
 
 # External object files for target SOLIDTests
 SOLIDTests_EXTERNAL_OBJECTS =
 
-SOLIDTests: CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o
+SOLIDTests: CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o
 SOLIDTests: CMakeFiles/SOLIDTests.dir/build.make
 SOLIDTests: libSOLIDLib.so
 SOLIDTests: lib/libgtest.a

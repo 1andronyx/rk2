@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/srp_test.cpp" "CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o" "gcc" "CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o.d"
+  "/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/dip_test.cpp" "CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o" "gcc" "CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
+
 project(SOLID)
 
 # Добавляем основные файлы проекта
@@ -7,8 +8,8 @@ add_library(SOLIDLib SHARED
     SRP.cpp
     LSP.cpp
     DIP.cpp
-    ISP.cpp
-)
+    ISP.cpp)
+
 
 add_executable(SOLIDProject
     Program.cpp
@@ -27,7 +28,7 @@ FetchContent_MakeAvailable(googletest)
 
 # Добавляем тестируемый исполняемый файл
 add_executable(SOLIDTests
-    tests/srp_test.cpp
+    tests/dip_test.cpp
 )
 
 # Линкуем библиотеки Google Test

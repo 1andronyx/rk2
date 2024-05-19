@@ -406,29 +406,29 @@ SRP.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOLIDLib.dir/build.make CMakeFiles/SOLIDLib.dir/SRP.cpp.s
 .PHONY : SRP.cpp.s
 
-tests/srp_test.o: tests/srp_test.cpp.o
-.PHONY : tests/srp_test.o
+tests/dip_test.o: tests/dip_test.cpp.o
+.PHONY : tests/dip_test.o
 
 # target to build an object file
-tests/srp_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOLIDTests.dir/build.make CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o
-.PHONY : tests/srp_test.cpp.o
+tests/dip_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOLIDTests.dir/build.make CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o
+.PHONY : tests/dip_test.cpp.o
 
-tests/srp_test.i: tests/srp_test.cpp.i
-.PHONY : tests/srp_test.i
+tests/dip_test.i: tests/dip_test.cpp.i
+.PHONY : tests/dip_test.i
 
 # target to preprocess a source file
-tests/srp_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOLIDTests.dir/build.make CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.i
-.PHONY : tests/srp_test.cpp.i
+tests/dip_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOLIDTests.dir/build.make CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.i
+.PHONY : tests/dip_test.cpp.i
 
-tests/srp_test.s: tests/srp_test.cpp.s
-.PHONY : tests/srp_test.s
+tests/dip_test.s: tests/dip_test.cpp.s
+.PHONY : tests/dip_test.s
 
 # target to generate assembly for a file
-tests/srp_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOLIDTests.dir/build.make CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.s
-.PHONY : tests/srp_test.cpp.s
+tests/dip_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOLIDTests.dir/build.make CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.s
+.PHONY : tests/dip_test.cpp.s
 
 # Help Target
 help:
@@ -468,9 +468,9 @@ help:
 	@echo "... SRP.o"
 	@echo "... SRP.i"
 	@echo "... SRP.s"
-	@echo "... tests/srp_test.o"
-	@echo "... tests/srp_test.i"
-	@echo "... tests/srp_test.s"
+	@echo "... tests/dip_test.o"
+	@echo "... tests/dip_test.i"
+	@echo "... tests/dip_test.s"
 .PHONY : help
 
 

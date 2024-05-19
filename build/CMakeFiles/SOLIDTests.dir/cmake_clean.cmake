@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o"
-  "CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o.d"
+  "CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o"
+  "CMakeFiles/SOLIDTests.dir/tests/dip_test.cpp.o.d"
   "SOLIDTests"
   "SOLIDTests.pdb"
 )
