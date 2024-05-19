@@ -8,8 +8,8 @@ add_library(SOLIDLib SHARED
     SRP.cpp
     LSP.cpp
     DIP.cpp
-    ISP.cpp
-)
+    ISP.cpp)
+
 
 add_executable(SOLIDProject
     Program.cpp
