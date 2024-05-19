@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/SOLIDTests.dir/tests/srp_test.cpp.o -o SOLIDTests  -Wl,-rpath,/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build libSOLIDLib.so lib/libgtest.a lib/libgtest_main.a lib/libgtest.a 

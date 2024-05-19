@@ -1,28 +1,30 @@
-name: Build
+name: Build and Test
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v2
-
+      
     - name: Set up CMake
       uses: actions/setup-cmake@v2
       with:
         cmake-version: '3.20'
 
-    - name: Configure CMake
-      run: cmake -S . -B build
-
-    - name: Build
-      run: cmake --build build --config Release
-
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: executable
-        path: build/SOLIDProject
+    - name: Configure, build, and test
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        ctest --output-on-failure

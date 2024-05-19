@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared -Wl,-soname,libSOLIDLib.so -o libSOLIDLib.so CMakeFiles/SOLIDLib.dir/OCP.cpp.o CMakeFiles/SOLIDLib.dir/SRP.cpp.o CMakeFiles/SOLIDLib.dir/LSP.cpp.o CMakeFiles/SOLIDLib.dir/DIP.cpp.o CMakeFiles/SOLIDLib.dir/ISP.cpp.o 

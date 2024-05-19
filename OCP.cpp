@@ -111,6 +111,10 @@ namespace SecondExampleOCP {
         std::string m_name;
         Color       m_color;
         Size        m_size;
+
+        // Конструктор
+        Product(const std::string& name, Color color, Size size)
+            : m_name{ name }, m_color{ color }, m_size{ size } {}
     };
 
     template <typename T>
@@ -274,6 +278,10 @@ namespace SecondConceptualExampleOCP {
         Color       m_color;
         Size        m_size;
         double      m_price;
+
+        // Конструктор
+        ProductEx(const std::string& name, Color color, Size size, double price)
+            : m_name{ name }, m_color{ color }, m_size{ size }, m_price{ price } {}
     };
 
     class PriceSpecification : public ISpecification<ProductEx>

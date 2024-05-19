@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/SOLIDProject.dir/Program.cpp.o -o SOLIDProject  -Wl,-rpath,/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build libSOLIDLib.so 

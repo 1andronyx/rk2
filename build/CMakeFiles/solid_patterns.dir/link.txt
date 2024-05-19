@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/solid_patterns.dir/DIP.cpp.o CMakeFiles/solid_patterns.dir/ISP.cpp.o CMakeFiles/solid_patterns.dir/LSP.cpp.o CMakeFiles/solid_patterns.dir/OCP.cpp.o CMakeFiles/solid_patterns.dir/Program.cpp.o CMakeFiles/solid_patterns.dir/SRP.cpp.o -o solid_patterns 

@@ -1,0 +1,3 @@
+/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
+/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir

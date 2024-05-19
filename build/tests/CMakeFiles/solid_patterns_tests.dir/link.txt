@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/solid_patterns_tests.dir/srp_test.cpp.o -o solid_patterns_tests 

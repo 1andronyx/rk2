@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/SOLIDTests.dir/srp_test.cpp.o -o SOLIDTests  ../libSOLIDLib.a 
