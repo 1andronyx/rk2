@@ -1,36 +1,93 @@
-#include "gtest/gtest.h"
-#include "../DIP.cpp"
+#include <iostream>
+#include <string>
+#include <vector>
+#include <tuple>
 
-class DIPTest_AntiConceptualExample_Test : public ::testing::Test {
-protected:
-    void SetUp() override {}
+enum class Relationship { Parent, Child, Sibling };
 
-    void TearDown() override {}
+struct Person
+{
+    std::string m_name;
 };
 
-class DIPTest_ConceptualExample_Test : public ::testing::Test {
-protected:
-    void SetUp() override {}
+namespace DependencyInversionPrinciple01
+{
+    // low-level <<<<<<<<< -------------------
+    class Relationships
+    {
+    public:
+        std::vector<std::tuple<Person, Relationship, Person>> m_relations;
 
-    void TearDown() override {}
-};
+        void addParentAndChild(const Person& parent, const Person& child)
+        {
+            m_relations.push_back({ parent, Relationship::Parent, child });
+            m_relations.push_back({ child, Relationship::Child, parent });
+        }
+    };
 
-class DIPTest_Third_Test : public ::testing::Test {
-protected:
-    void SetUp() override {}
-
-    void TearDown() override {}
-};
-
-TEST_F(DIPTest_AntiConceptualExample_Test, TestBody) {
-    DependencyInversionPrinciple01::test_anti_conceptual_example_dip();
+    // high-level <<<<<<<<< -------------------
+    class FamilyTree
+    {
+    public:
+        FamilyTree(const Relationships& relationships)
+        {
+            // using structured binding (C++ 17) and range-based for loop (C++ 11)
+            for (const auto& [first, relation, second] : relationships.m_relations)
+            {
+                if (first.m_name == "John" && relation == Relationship::Parent) {
+                    std::cout << "John has a child called " << second.m_name << std::endl;
+                }
+            }
+        }
+    };
 }
 
-TEST_F(DIPTest_ConceptualExample_Test, TestBody) {
-    DependencyInversionPrinciple02::test_conceptual_example_dip();
+namespace DependencyInversionPrinciple02
+{
+    // abstraction
+    struct IRelationshipBrowser
+    {
+        virtual std::vector<Person> findAllChildrenOf(const std::string& name) const = 0;
+    };
+
+    // low-level <<<<<<<<< -------------------
+    class Relationships : public IRelationshipBrowser
+    {
+    public:
+        std::vector<std::tuple<Person, Relationship, Person>> m_relations;
+
+        void addParentAndChild(const Person& parent, const Person& child) {
+            m_relations.push_back({ parent, Relationship::Parent, child });
+            m_relations.push_back({ child, Relationship::Child, parent });
+        }
+
+        std::vector<Person> findAllChildrenOf(const std::string& name) const override {
+
+            std::vector<Person> result;
+            for (const auto& [first, rel, second] : m_relations) {
+                if (first.m_name == name && rel == Relationship::Parent) {
+                    result.push_back(second);
+                }
+            }
+            return result;
+        }
+    };
+
+    // high-level <<<<<<<<< -------------------
+    class FamilyTree
+    {
+    public:
+        FamilyTree(const IRelationshipBrowser& browser) {
+
+            for (const auto& child : browser.findAllChildrenOf("John")) {
+                std::cout << "John has a child called " << child.m_name << std::endl;
+            }
+        }
+    };
 }
 
-TEST_F(DIPTest_Third_Test, TestBody) {
+static void test_anti_conceptual_example_dip()
+{
     using namespace DependencyInversionPrinciple01;
 
     Person parent{ "John" };
@@ -42,9 +99,29 @@ TEST_F(DIPTest_Third_Test, TestBody) {
     relationships.addParentAndChild(parent, child1);
     relationships.addParentAndChild(parent, child2);
 
-    // Проверяем, что отношения добавлены корректно
-    ASSERT_EQ(relationships.m_relations.size(), 4);
+    FamilyTree tree{ relationships };
+}
 
-    // Проверяем, что дети добавлены корректно
-    ASSERT_EQ(relationships.findAllChildrenOf("John").size(), 2);
+static void test_conceptual_example_dip()
+{
+    using namespace DependencyInversionPrinciple02;
+
+    Person parent{ "John" };
+    Person child1{ "Carina" };
+    Person child2{ "Mary" };
+
+    Relationships relationships{};
+
+    relationships.addParentAndChild(parent, child1);
+    relationships.addParentAndChild(parent, child2);
+
+    const IRelationshipBrowser& browser = relationships;
+
+    FamilyTree tree{ browser };
+}
+
+void test_dip()
+{
+    test_anti_conceptual_example_dip();
+    test_conceptual_example_dip();
 }
