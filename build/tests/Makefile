@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patter
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -84,6 +94,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,42 +172,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tests/CMakeFiles/SOLIDTests.dir/rule:
-	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/SOLIDTests.dir/rule
-.PHONY : tests/CMakeFiles/SOLIDTests.dir/rule
+tests/CMakeFiles/runTests.dir/rule:
+	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/runTests.dir/rule
+.PHONY : tests/CMakeFiles/runTests.dir/rule
 
 # Convenience name for target.
-SOLIDTests: tests/CMakeFiles/SOLIDTests.dir/rule
-.PHONY : SOLIDTests
+runTests: tests/CMakeFiles/runTests.dir/rule
+.PHONY : runTests
 
 # fast build rule for target.
-SOLIDTests/fast:
-	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SOLIDTests.dir/build.make tests/CMakeFiles/SOLIDTests.dir/build
-.PHONY : SOLIDTests/fast
+runTests/fast:
+	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/build
+.PHONY : runTests/fast
 
-srp_test.o: srp_test.cpp.o
-.PHONY : srp_test.o
+dip_test.o: dip_test.cpp.o
+.PHONY : dip_test.o
 
 # target to build an object file
-srp_test.cpp.o:
-	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SOLIDTests.dir/build.make tests/CMakeFiles/SOLIDTests.dir/srp_test.cpp.o
-.PHONY : srp_test.cpp.o
+dip_test.cpp.o:
+	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/dip_test.cpp.o
+.PHONY : dip_test.cpp.o
 
-srp_test.i: srp_test.cpp.i
-.PHONY : srp_test.i
+dip_test.i: dip_test.cpp.i
+.PHONY : dip_test.i
 
 # target to preprocess a source file
-srp_test.cpp.i:
-	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SOLIDTests.dir/build.make tests/CMakeFiles/SOLIDTests.dir/srp_test.cpp.i
-.PHONY : srp_test.cpp.i
+dip_test.cpp.i:
+	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/dip_test.cpp.i
+.PHONY : dip_test.cpp.i
 
-srp_test.s: srp_test.cpp.s
-.PHONY : srp_test.s
+dip_test.s: dip_test.cpp.s
+.PHONY : dip_test.s
 
 # target to generate assembly for a file
-srp_test.cpp.s:
-	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SOLIDTests.dir/build.make tests/CMakeFiles/SOLIDTests.dir/srp_test.cpp.s
-.PHONY : srp_test.cpp.s
+dip_test.cpp.s:
+	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/dip_test.cpp.s
+.PHONY : dip_test.cpp.s
 
 # Help Target
 help:
@@ -161,11 +216,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... SOLIDTests"
-	@echo "... srp_test.o"
-	@echo "... srp_test.i"
-	@echo "... srp_test.s"
+	@echo "... test"
+	@echo "... runTests"
+	@echo "... dip_test.o"
+	@echo "... dip_test.i"
+	@echo "... dip_test.s"
 .PHONY : help
 
 

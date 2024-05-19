@@ -69,30 +69,29 @@ include tests/CMakeFiles/SOLIDTests.dir/progress.make
 # Include the compile flags for this target's objects.
 include tests/CMakeFiles/SOLIDTests.dir/flags.make
 
-tests/CMakeFiles/SOLIDTests.dir/srp_test.cpp.o: tests/CMakeFiles/SOLIDTests.dir/flags.make
-tests/CMakeFiles/SOLIDTests.dir/srp_test.cpp.o: /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/srp_test.cpp
-tests/CMakeFiles/SOLIDTests.dir/srp_test.cpp.o: tests/CMakeFiles/SOLIDTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/SOLIDTests.dir/srp_test.cpp.o"
-	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/SOLIDTests.dir/srp_test.cpp.o -MF CMakeFiles/SOLIDTests.dir/srp_test.cpp.o.d -o CMakeFiles/SOLIDTests.dir/srp_test.cpp.o -c /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/srp_test.cpp
+tests/CMakeFiles/SOLIDTests.dir/dip_test.cpp.o: tests/CMakeFiles/SOLIDTests.dir/flags.make
+tests/CMakeFiles/SOLIDTests.dir/dip_test.cpp.o: /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/dip_test.cpp
+tests/CMakeFiles/SOLIDTests.dir/dip_test.cpp.o: tests/CMakeFiles/SOLIDTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/SOLIDTests.dir/dip_test.cpp.o"
+	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/SOLIDTests.dir/dip_test.cpp.o -MF CMakeFiles/SOLIDTests.dir/dip_test.cpp.o.d -o CMakeFiles/SOLIDTests.dir/dip_test.cpp.o -c /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/dip_test.cpp
 
-tests/CMakeFiles/SOLIDTests.dir/srp_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SOLIDTests.dir/srp_test.cpp.i"
-	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/srp_test.cpp > CMakeFiles/SOLIDTests.dir/srp_test.cpp.i
+tests/CMakeFiles/SOLIDTests.dir/dip_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SOLIDTests.dir/dip_test.cpp.i"
+	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/dip_test.cpp > CMakeFiles/SOLIDTests.dir/dip_test.cpp.i
 
-tests/CMakeFiles/SOLIDTests.dir/srp_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SOLIDTests.dir/srp_test.cpp.s"
-	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/srp_test.cpp -o CMakeFiles/SOLIDTests.dir/srp_test.cpp.s
+tests/CMakeFiles/SOLIDTests.dir/dip_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SOLIDTests.dir/dip_test.cpp.s"
+	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests/dip_test.cpp -o CMakeFiles/SOLIDTests.dir/dip_test.cpp.s
 
 # Object files for target SOLIDTests
 SOLIDTests_OBJECTS = \
-"CMakeFiles/SOLIDTests.dir/srp_test.cpp.o"
+"CMakeFiles/SOLIDTests.dir/dip_test.cpp.o"
 
 # External object files for target SOLIDTests
 SOLIDTests_EXTERNAL_OBJECTS =
 
-tests/SOLIDTests: tests/CMakeFiles/SOLIDTests.dir/srp_test.cpp.o
+tests/SOLIDTests: tests/CMakeFiles/SOLIDTests.dir/dip_test.cpp.o
 tests/SOLIDTests: tests/CMakeFiles/SOLIDTests.dir/build.make
-tests/SOLIDTests: libSOLIDLib.a
 tests/SOLIDTests: tests/CMakeFiles/SOLIDTests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SOLIDTests"
 	cd /home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SOLIDTests.dir/link.txt --verbose=$(VERBOSE)

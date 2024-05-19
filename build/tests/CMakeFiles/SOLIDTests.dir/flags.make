@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID/tests
+CXX_INCLUDES = -I/home/oleg/1andronyx/workspace/projects/rk2/cpp_design_patterns/Patterns/SOLID
 
 CXX_FLAGS = -std=gnu++17
 

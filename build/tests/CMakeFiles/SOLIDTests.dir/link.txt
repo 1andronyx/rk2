@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/SOLIDTests.dir/srp_test.cpp.o -o SOLIDTests  ../libSOLIDLib.a 
+/usr/bin/c++ CMakeFiles/SOLIDTests.dir/dip_test.cpp.o -o SOLIDTests  -lSOLIDLib -lgtest -lgtest_main -lgtest 
