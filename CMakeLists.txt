@@ -29,6 +29,7 @@ FetchContent_MakeAvailable(googletest)
 # Добавляем тестируемый исполняемый файл
 add_executable(SOLIDTests
     tests/srp_test.cpp
+    tests/srp.h
 )
 
 # Линкуем библиотеки Google Test
